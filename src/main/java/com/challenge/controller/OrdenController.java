@@ -39,11 +39,9 @@ public class OrdenController {
             }
             return new ResponseEntity<>(top5ClientesFrecuentes, HttpStatus.OK);
         } catch (IllegalStateException e) {
-            // Loguear el error si es necesario
             e.printStackTrace();
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         } catch (Exception e) {
-            // Loguear cualquier otro error inesperado
             e.printStackTrace();
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }

@@ -46,9 +46,8 @@ public class InventarioServiceTest {
 
     @Test
     public void testObtenerInventario() {
-        // Configurar datos de prueba
+
         List<Inventario> inventarioList = new ArrayList<>();
-        // Agregar elementos al inventarioList según sea necesario
 
         when(inventarioRepository.findAll()).thenReturn(inventarioList);
 

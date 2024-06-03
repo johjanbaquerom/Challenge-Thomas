@@ -18,10 +18,8 @@ public class BCryptPasswordEncoderTest {
 
         System.out.println("Contraseña codificada: " + encodedPassword);
 
-        // Verifica que la contraseña codificada coincida con la contraseña original
         assertTrue(passwordEncoder.matches(rawPassword, encodedPassword));
 
-        // Verifica que una contraseña incorrecta no coincida
         assertFalse(passwordEncoder.matches("wrongPassword", encodedPassword));
     }
 }
